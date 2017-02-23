@@ -10,26 +10,31 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         
         <StackPanel Margin="20" >
-            <TextBlock Text="Insira Novo Habito"></TextBlock>
-            <TextBox Name="Input_Box"></TextBox>
+            <TextBlock Text="Hábitos" HorizontalAlignment="Center" FontSize="20" Margin="10"></TextBlock>
             <!--
+            <TextBox Name="Input_Box"></TextBox>
+            
             <Button Click="AddHabit">Add</Button>
             -->
-            <ListView Name="Output">
+            <ListView x:Name="habits_output" MinHeight="200" >
                 <ListView.ItemTemplate>
                     
-                    <DataTemplate>
-                        
+                    <DataTemplate>                        
                         <TextBlock Text="{Binding}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+            <!--
             <CommandBar VerticalAlignment="Bottom">
                 <AppBarButton Icon="Add" Label="Adicionar" Click="AddHabit"/>
             </CommandBar>
-            
+            -->          
+
         </StackPanel>
-    
+        <CommandBar VerticalAlignment="Bottom">
+            <AppBarButton Icon="Add" Label="Adicionar" Click="PageAddHabit"/>
+        </CommandBar>
+
+
     </Grid>
 </Page>

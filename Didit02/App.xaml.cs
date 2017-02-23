@@ -33,10 +33,10 @@ namespace Didit02
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             SqliteEngine.UseWinSqlite3(); //Configuring library to use SDK version of SQLite
-            using (SqliteConnection db = new SqliteConnection("Filename=didit_db.db"))
+            using (SqliteConnection db = new SqliteConnection("Filename=didit1_db.db"))
             {
                 db.Open();
-                String tableCommand = "CREATE TABLE IF NOT EXISTS Habit (Primary_Key INTEGER PRIMARY KEY AUTOINCREMENT, text_habit NVARCHAR(2048) NULL)";
+                string tableCommand = "CREATE TABLE IF NOT EXISTS Habit (Primary_Key INTEGER PRIMARY KEY AUTOINCREMENT, text_habit NVARCHAR(2048) NULL)";
                 // String tableCommand = "CREATE TABLE IF NOT EXISTS MyTable (Primary_Key INTEGER PRIMARY KEY AUTOINCREMENT, Text_Entry NVARCHAR(2048) NULL)";
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
                 try

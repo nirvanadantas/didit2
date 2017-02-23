@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Didit02.PageAddHabit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Didit02"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+
+            <StackPanel>
+                <TextBlock Text="Habito" FontSize="36" HorizontalAlignment="Center" Margin="20"/>
+                <TextBox x:Name="habit_string" Margin="30,50,30,30" FontSize="36" FontWeight="Bold" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Height="100" Width="100" HorizontalAlignment="Center" Margin="0,0,25,0"
+                            Click="AddHabit">
+                        <SymbolIcon Symbol="Accept"/>
+                    </Button>
+                    <Button Height="100" Width="100" HorizontalAlignment="Center" Margin="25,0,0,0"
+                            Click="AddHabit">
+                        <SymbolIcon Symbol="Cancel"/>
+                    </Button>
+                </StackPanel>
+                
+                <TimePicker HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+
+            <AppBar VerticalAlignment="Bottom" ClosedDisplayMode="Compact">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <AppBarButton Icon="Back" Click="BacktoMain"/>
+                    <AppBarButton Icon="Add" Click="AddHabit"/>
+                </StackPanel>
+            </AppBar>
+
+
+        </Grid>
+
+    </Grid>
+</Page>
